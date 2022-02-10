@@ -1,0 +1,27 @@
+
+.disgnMainDivMovies{
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:20px;
+  padding: 5%;
+  
+}
+
+.mainMovies{
+  background-color: rgb(80, 80, 80);
+  border: 1px solid white;
+  display: flex;
+  max-width: 20vw;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.3rem;
+
+}
+
+img {
+  max-width:100%;
+  border-radius: 10px;
+}
