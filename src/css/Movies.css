@@ -10,7 +10,7 @@
 }
 
 .mainMovies{
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(83, 80, 80);
   border: 1px solid white;
   display: flex;
   max-width: 20vw;
@@ -24,4 +24,31 @@
 img {
   max-width:100%;
   border-radius: 10px;
+}
+
+.nameOfMovie{
+  font-family: 'Festive', cursive;
+  color: white;
+}
+
+.sectionDiv{
+  background-color: black;
+}
+
+.inputDivAround{
+ text-align: center;
+padding: 2em;
+}
+
+.SearchInput{
+  width: 80%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 1em;
+  padding: 1em;
+  
+}
+
+.SearchInput:focus{
+  outline: 2px solid rgb(248, 141, 0);
 }

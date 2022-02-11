@@ -8,6 +8,7 @@ import '../css/Movies.css'
 
 function Movies() {
   const [movies, setMovies] = useState([])
+  const [inputText, setInputText] = useState('')
 
   useEffect(() => {
     fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20", {
@@ -18,28 +19,40 @@ function Movies() {
       }
     })
       .then(response => response.json())
-      .then(data => setMovies(data.d)) 
+      .then(data => setMovies(data.d))
       .catch(err => { console.error(err) });
 
   }, [])
-  
-  console.log(movies);
+  // console.log(movies);
 
   return (
-    <div className="disgnMainDivMovies">
-      {
-       movies.length ? (
-        movies.map(movie => {
-         return <div className="mainMovies" key={movie.id}>
-            <img src={movie.i.imageUrl} alt="meshiImg" />
-            <p>{movie.l}</p>
-          </div>
-        })
-       ) : <h1>loading</h1> 
-      
-      }
+    <div className="sectionDiv">
+      <div className="inputDivAround">
+        <input className="SearchInput" placeholder="type the of movie" onChange={(event)=>{setInputText(event.target.value)}}/>
+      </div>
+      <div className="disgnMainDivMovies">
+        {
+          movies.length ? (
+            movies.filter(movie =>{
+              if(movie === ''){
+                return movie
+              }else if(movie.l.toLowerCase().includes(inputText.toLowerCase())){
+                 return movie
+              }
+            }).map(movie => {
+              return <div className="mainMovies" key={movie.id}>
+                <img src={movie.i.imageUrl} alt="meshiImg" />
+                <p className="nameOfMovie">{movie.l}</p>
+              </div>
+            })
+           
+          ) : <h1>loading</h1>
+
+        }
+      </div>
     </div>
- 
+
+
   )
 
 
