@@ -20,7 +20,6 @@ function Movies() {
         console.error(err);
       });
   }, []);
-  // console.log(movies);
 
   return (
     <div className="sectionDiv">
