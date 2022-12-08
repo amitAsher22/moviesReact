@@ -7,7 +7,7 @@ function Movies() {
   const [inputText, setInputText] = useState("");
 
   useEffect(() => {
-    fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%20", {
+    fetch("https://imdb8.p.rapidapi.com/auto-complete?q=game%40", {
       method: "GET",
       headers: {
         "x-rapidapi-host": "imdb8.p.rapidapi.com",
@@ -20,6 +20,7 @@ function Movies() {
         console.error(err);
       });
   }, []);
+  console.log(movies);
 
   return (
     <div className="sectionDiv">
@@ -32,6 +33,7 @@ function Movies() {
           }}
         />
       </div>
+
       <div className="disgnMainDivMovies">
         {movies.length ? (
           movies
@@ -49,6 +51,7 @@ function Movies() {
                 <div className="mainMovies" key={movie.id}>
                   <img src={movie.i.imageUrl} alt="meshiImg" />
                   <p className="nameOfMovie">{movie.l}</p>
+                  <p className="yearOfMovie">{movie.y}</p>
                 </div>
               );
             })
