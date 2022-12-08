@@ -1,0 +1,102 @@
+.disgnMainDivMovies {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 5%;
+
+}
+
+.mainMovies {
+  background-color: rgb(83, 80, 80);
+  border: 1px solid white;
+  display: flex;
+  max-width: 20vw;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.3rem;
+
+}
+
+.mainMovies:hover {
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+
+
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.nameOfMovie {
+  font-family: 'Festive', cursive;
+  color: white;
+}
+
+.sectionDiv {
+  background-color: black;
+}
+
+.inputDivAround {
+  text-align: center;
+  padding: 2em;
+}
+
+.SearchInput {
+  width: 80%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 1em;
+  padding: 1em;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.SearchInput:focus {
+  outline: 2px solid rgb(248, 141, 0);
+}
+
+.yearOfMovie {
+  font-size: 1.5rem;
+  color: rgb(208, 208, 107);
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+@media (orientation: portrait) {
+  .disgnMainDivMovies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding: 0px;
+
+  }
+
+  .mainMovies {
+    background-color: rgb(83, 80, 80);
+    border: 1px solid white;
+    /* display: flex; */
+    max-width: 70%;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.3rem;
+  }
+
+  .mainMovies:hover {
+    position: static;
+  }
+
+
+}
